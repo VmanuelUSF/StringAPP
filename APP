@@ -1,0 +1,56 @@
+using System;
+using Birth_Date_String;
+
+namespace BirthDate
+{
+    public partial class FormDate : Form
+    {
+        public FormDate()
+        {
+            InitializeComponent();
+        }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ButtonShowDate_Click(object sender, EventArgs e, object dateOutputLabel)
+        {
+            // Declare a string variable.
+            string output;
+
+            // Concatenate the input and build the output string.
+            output = DayOfWeekTextBox.Text + ", " + 
+                 monthTextBox.Text + ", " +
+                 dayofMonthTextBox.Text + ", " +
+                 yearTextBox.Text;
+
+            // Display the output string in the Label control.
+            dateOutputLabel.Text = output;
+        }
+
+        private void ButtonClear_Click(object sender, EventArgs e)
+        {
+            //Clear the TextBoxes.
+            dayofweek.TextBox.Text = "";
+            monthTextBox.Text = "";
+            dayofMonthTextBox.Text = "";
+            yearTextBox.Text = "";
+
+            // Clear the dateOutputLabel control.
+            dateOutputLabel.Text = "";
+        }
+
+        private void ButtonExit_Click(object sender, EventArgs e)
+        {
+            // Close the form.
+            this.Close();
+        }
+
+        private void Close()
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
